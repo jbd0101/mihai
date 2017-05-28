@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "IORGU SPRL" %></title>
+    <%= stylesheet_link_tag "site" %>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',"//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js","all" %>
+  </head>
+  <body class="grey lighten-4">
+    <nav style="background-color: #08A4BD">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center"><%= image_tag "logo.jpg" %></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><%= link_to "A-propos de nous","about" %></li>
+
+      <% if !current_page.data.navbar.nil? %>
+        <% current_page.data.navbar.each do |link| %>
+          <li><%= link_to link,link %></li>
+        <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+---
+title: Bienvenue chez Iorgu SPRL
+
+---
+
+<h1 class="flow-text center">Bienvenue chez IORGU SPRL</h1>
+<p class="center"> Notre entreprise vous propose des services de nettoyage et de pose de stores. Faites-nous confiance dans nos deux domaines d'expertise...
+</p>
+<p><br></p>
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6">
+      <% link_to "stores/bienvenue" do %>
+      <%= image_tag 'stores.jpeg', :class=> "responsive-img" %>
+      <p class="center flow-text">Stores</p>
+      <% end %>
+    </div>
+    <div class="col s12 m6">
+      <% link_to "nettoyage/bienvenue" do %>
+
+      <%= image_tag 'nettoyage.jpeg', :class=> "responsive-img" %>
+      <p class="center flow-text">Nettoyage</p>
+      <% end %>
+
+
+    </div>
+  </div>
+</div>

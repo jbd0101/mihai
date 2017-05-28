@@ -1,0 +1,72 @@
+<h2 class="flow-text center">contactez-nous</h2>
+<!-- <form action="https://getsimpleform.com/messages?form_api_token=81cb829c36da2cf143e614c45266fd93" method="post"> -->
+<form action="" method="post">
+  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+  <!-- all your input fields here.... -->
+  <div class="input-field col s10">
+  <input type='text' id="nom" name='Nom' >
+    <label for="nom"> votre nom</label>
+  </div>
+
+  <div class="input-field col s10">
+
+    <input type='text' name='Prenom' >
+    <label> votre prénom</label>
+  </div>
+  <div class="input-field col s10">
+
+  <input type='text' name='email' >
+    <label> votre email</label>
+  </div>
+  <div class="input-field col s10">
+
+  <input type='text' name='sujet' >
+    <label> Le sujet</label>
+  </div>
+  <div class="input-field col s10">
+    <textarea id="textarea1" name="text" class="materialize-textarea"></textarea>
+    <label for="textarea1">Qu'avez-vous à nous demander?</label>
+  </div>
+  <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer
+  <i class="material-icons right">send</i>
+  </button>
+</form>
+<script>
+//   $("#contactForm").validate({
+// rules: {
+//     fullname: "required",
+//     email: {
+//       required: true,
+//       email: true
+//     }
+//   },
+
+//   submitHandler: function(form) {
+//     $.ajax({
+//       dataType: 'jsonp',
+//       url: "http://getsimpleform.com/messages/ajax?form_api_token=my-secret-token",
+//           data: $("#contactForm").serialize()
+//         }).done(function() {
+//       //callback which can be used to show a thank you message
+//       //and reset the form
+//       window.location.href = "/confirm.html";
+//     });
+//   }
+// });
+$(function(){
+  $("form").submit(function(e){
+    e.preventDefault();
+     $.ajax({
+      dataType: 'jsonp',
+      url: "http://getsimpleform.com/messages/ajax?form_api_token=81cb829c36da2cf143e614c45266fd93",
+          data: $("form").serialize()
+        }).done(function() {
+      //callback which can be used to show a thank you message
+      //and reset the form
+      $('form').hide();
+      $('.container').append('<p class="green-text"> Nous avons bien reçu votre email </p>');
+      // window.location.href = "/confirm.html";
+    });
+  });
+});
+</script>
