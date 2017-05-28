@@ -46,6 +46,7 @@ activate :directory_indexes
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+activate :autoprefixer
 
 set :css_dir, 'stylesheets'
 
@@ -58,14 +59,13 @@ configure :build do
   activate :minify_javascript
   activate :relative_assets
     # Use relative URLs
-  activate :relative_assets
+  # activate :relative_assets
   set :relative_links, true
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
   #
-  require_relative "./lib/build_cleaner"
-  activate :build_cleaner
+
 
 end
 activate :deploy do |deploy|
