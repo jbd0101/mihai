@@ -46,7 +46,7 @@ activate :directory_indexes
 #   activate :minify_css
 #   activate :minify_javascript
 # end
-activate :autoprefixer
+# activate :autoprefixer
 
 set :css_dir, 'stylesheets'
 
