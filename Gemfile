@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'middleman', '~> 4.2'
-gem 'middleman-deploy'
+gem 'middleman-deploy', '~> 1.0'
 # gem "jquery-middleman"
 gem 'middleman-sprockets', '4.0.0'
 gem 'materialize-sass'
