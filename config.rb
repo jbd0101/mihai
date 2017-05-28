@@ -46,14 +46,34 @@ activate :directory_indexes
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+set :css_dir, 'stylesheets'
+
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
+  activate :relative_assets
+  set :site_url, "/mihai"
+    # Use relative URLs
+  activate :relative_assets
+  set :relative_links, true
+
+  # Or use a different image path
+  # set :http_prefix, "/Content/images/"
+  #
+  require_relative "./lib/build_cleaner"
+  activate :build_cleaner
 
 end
 activate :deploy do |deploy|
   deploy.deploy_method = :git
   # Optional Settings
+  deploy.build_before = true
+
   # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
   deploy.branch   = 'master' # default: gh-pages
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
