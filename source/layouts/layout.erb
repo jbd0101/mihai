@@ -32,16 +32,24 @@
     <%= yield %>
 <p></p>
 <p></p>
-<p></p>
-<p></p>
 <style>
-  footer{
+/*  footer{
+    margin-top: 120px;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
 
+  }*/
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
   }
 </style>
 
