@@ -3,26 +3,49 @@ title: Bienvenue chez Iorgu SPRL
 
 ---
 
-<h1 class="flow-text center">Bienvenue chez IORGU SPRL</h1>
-<p class="center"> Notre entreprise vous propose des services de nettoyage et de pose de stores. Faites-nous confiance dans nos deux domaines d'expertise...
-</p>
+<h1 class="flow-text center">IORGU SPRL</h1>
+
 <p><br></p>
 <div class="container">
   <div class="row">
     <div class="col s12 m6">
       <% link_to "stores/bienvenue" do %>
       <%= image_tag 'stores.jpeg', :class=> "responsive-img" %>
-      <p class="center flow-text">Habillage fenêtre</p>
+      <p class="center flow-text">Habillage de fenêtre</p>
       <% end %>
     </div>
     <div class="col s12 m6">
       <% link_to "nettoyage/bienvenue" do %>
-
       <%= image_tag 'nettoyage.jpeg', :class=> "responsive-img" %>
       <p class="center flow-text">Nettoyage professionnel</p>
       <% end %>
-
-
     </div>
   </div>
 </div>
+
+<footer class="page-footer grey darken-2 ">
+  <div class="container">
+    <div class="row">
+      <div class="col m6 s12">
+          <p class='white-text'>Mihai Iorgu: <span>mjustin.iorgu@hotmail.com</span></p>
+      </div>
+      <div class="col m6 s12">
+        <p class='white-text'>Contactez-nous par téléphone: 0032 473 384 410</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright grey darken-3">
+    <p style="font-size: 10pt;" class='white-text'>Created by Bauduin Jean-Christophe</p>
+  </div>
+</footer>
+
+<style>
+  footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+
+  }
+</style>
