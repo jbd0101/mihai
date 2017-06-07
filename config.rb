@@ -69,10 +69,14 @@ configure :build do
 
 end
 activate :deploy do |deploy|
-  deploy.deploy_method = :git
-  # Optional Settings
-  deploy.build_before = true
-
+  # deploy.deploy_method = :git
+  # # Optional Settings
+  # deploy.build_before = true
+  deploy.deploy_method   = :ftp
+  deploy.host            = 'ftp.cluster021.hosting.ovh.net'
+  deploy.path            = '/www/'
+  deploy.user            = 'iorgusprtj'
+  deploy.password        = 'qRMr8jgYTvVG'
   # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
   deploy.branch   = 'master' # default: gh-pages
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push

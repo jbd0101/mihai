@@ -13,11 +13,11 @@
     <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',"//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js","all" %>
   </head>
   <body class="grey lighten-4">
-    <nav style="background-color: #08A4BD">
+    <nav class="white">
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo center"><%= image_tag "logo.jpg" %></a>
+      <a href="/" class="brand-logo center"><%= image_tag "logov2.png",height: 61 %></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><%= link_to "A-propos de nous","about" %></li>
+      <li class="black-text"><%= link_to "A-propos de nous","about",class: "black-text" %></li>
 
       <% if !current_page.data.navbar.nil? %>
         <% current_page.data.navbar.each do |link| %>
