@@ -21,7 +21,7 @@
       <ul id="nav-mobile" class="left hide-on-med-and-down">
       <li class="black-text"><%= link_to "A-propos de nous","about",class: "black-text" %></li>
 
-      <% if !current_page.data.navbar.nil? %>
+      <% if !current_page.data.navbar.nil? && 1!=1%>
         <% current_page.data.navbar.each do |link| %>
           <li><%= link_to link,link %></li>
         <% end %>
