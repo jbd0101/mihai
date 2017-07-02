@@ -10,15 +10,20 @@ title: Bienvenue chez Iorgu SPRL
   <div class="row">
     <div class="col s12 m6">
       <% link_to "stores/bienvenue" do %>
-      <%= image_tag 'stores.jpeg', :class=> "responsive-img" %>
+      <%= image_tag 'stores.jpg', :class=> "responsive-img fixed-height" %>
       <p class="center flow-text">Décoration de fenêtre</p>
       <% end %>
     </div>
     <div class="col s12 m6">
       <% link_to "nettoyage/bienvenue" do %>
-      <%= image_tag 'nettoyage.jpeg', :class=> "responsive-img" %>
+      <%= image_tag 'nettoyage.jpg',:class=> "responsive-img fixed-height"%>
       <p class="center flow-text">Nettoyage professionnel</p>
       <% end %>
     </div>
   </div>
 </div>
+<style>
+  .fixed-height{
+    height: 320px!important;
+  }
+</style>
